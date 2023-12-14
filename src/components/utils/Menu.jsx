@@ -1,11 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const Menu = ({handleMenuActive,svg,menutitle,showSidebar,menuitem,submenuRef,isArrowUp,menulist}) => {
+const Menu = ({handleMenu,svg,menutitle,showSidebar,menuitem,submenuRef,isSubmenuOpen,isArrowUp,menulist}) => {
   return (
     <li  className="w-full overflow-hidden capitalize shrink-0 ">
-              <div onClick={()=>{
-                handleMenuActive()
-              }}
+              <div onClick={handleMenu}
                 className={`navlink text-white
               font-poppins flex items-center gap-4 w-full p-4 cursor-pointer font-bold `}>
                <span className="shrink-0">
@@ -17,43 +16,22 @@ const Menu = ({handleMenuActive,svg,menutitle,showSidebar,menuitem,submenuRef,is
                 </span>
               </div>
               {/* nested submenu */}
-              {showSidebar && (<ul ref={(ref) => (submenuRef.current[{menuitem}] = ref)}
+              <ul ref={(ref) => (submenuRef.current[`${menuitem}`] = ref)}
                   className={`flex flex-col gap-1 duration-300 dropdown-menu pl-10`}
                   style={{
-                    maxHeight: isSubmenuOpen[{menuitem}]
-                      ? `${submenuRef.current[{menuitem}]?.scrollHeight}px`
+                    maxHeight: isSubmenuOpen[`${menuitem}`]
+                      ? `${submenuRef.current[`${menuitem}`]?.scrollHeight}px`
                       : "0",
                   }}>
                 {/* users  */}
 
-            <li>
-              <Link
-                to="/users"
-                className={`nested text-white font-poppins flex items-center gap-4 w-full p-4 cursor-pointer `}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    
-                  }}
-              >
-              
-                
-
-                <span
-                  className={` ${showSidebar ? "block" : "hidden"} origin-left duration-300 font-poppins`}
-                >
-                 All Users
-                </span>
-              </Link>
-            </li>
+    
             {menulist.map((item,index)=>{
                 return(<li key={index}>
                     <Link
                       to={item.path}
                       className={`nested text-white font-poppins flex items-center gap-4 w-full p-4 cursor-pointer `}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          
-                        }}
+                        onClick={(e) =>e.stopPropagation()}
                     >
                     
                       
@@ -68,7 +46,7 @@ const Menu = ({handleMenuActive,svg,menutitle,showSidebar,menuitem,submenuRef,is
             })}
 
 
-              </ul>)}
+              </ul>
             </li>
   )
 }
