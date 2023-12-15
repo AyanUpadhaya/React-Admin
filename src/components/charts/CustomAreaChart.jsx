@@ -17,7 +17,7 @@ const data = [
   {
     name: 'Page C',
     uv: -1000,
-    pv: 9800,
+    pv: 4800,
     amt: 2290,
   },
   {
@@ -28,7 +28,7 @@ const data = [
   },
   {
     name: 'Page E',
-    uv: -2000,
+    uv: 5000,
     pv: 4800,
     amt: 2181,
   },
@@ -83,8 +83,8 @@ const CustomAreaChart = () => {
             <Tooltip />
             <defs>
               <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
-                <stop offset={off} stopColor="green" stopOpacity={1} />
-                <stop offset={off} stopColor="red" stopOpacity={1} />
+                <stop offset={off} stopColor="#1E293B" stopOpacity={1} />
+                <stop offset={off} stopColor="#EF5777" stopOpacity={1} />
               </linearGradient>
             </defs>
             <Area type="monotone" dataKey="uv" stroke="#000" fill="url(#splitColor)" />

@@ -6,14 +6,14 @@ import { Outlet } from 'react-router-dom'
 const Layout = () => {
     const [showSidebar,setShowSidebar] = useState(true);
   return (
-    <div className='bg-whiteGrayLow w-full h-screen overflow-hidden'>
+    <div className='bg-slateLow w-full h-screen overflow-hidden'>
         <div className='flex items-start h-full '>
             <div className={ `h-full `}>
                 <Sidebar showSidebar={showSidebar} toggleSidebar={()=>setShowSidebar(prev=>!prev)} ></Sidebar>
             </div> 
             <div className='h-full flex-1 w-full overflow-hidden' >
                 <Navbar toggleSidebar = {()=>setShowSidebar(prev=>!prev)}></Navbar>
-                <div className="h-[calc(100%-90px)] overflow-auto">
+                <div className="h-[calc(100%-50px)] overflow-auto">
                     <Outlet></Outlet>
                 </div>
             </div>

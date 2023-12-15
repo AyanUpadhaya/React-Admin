@@ -31,7 +31,7 @@ const Gallery = () => {
 
                                 </figure>
 
-                                <div className="py-2">
+                                <div className="py-2 bg-white rounded-b-xl">
                                     <div className="card-actions justify-between px-2">
                                         <button className="btn "><i class="fa-solid fa-eye"></i></button>
                                         <button className="btn "><i class="fa-solid fa-trash"></i></button>

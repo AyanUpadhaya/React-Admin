@@ -1,7 +1,6 @@
 import React, { useRef, useState,useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import UsersSvg from '../../svg/UsersSvg';
-
+import './Sidebar.css'
 const Sidebar = ({showSidebar,toggleSidebar}) => {
   const [showNestedLinks, setShowNestedLinks] = useState(false);
   const [usersActive, setUsersActive] = useState(false);
@@ -37,11 +36,11 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
     <div
     className={`${showSidebar? "w-64" : "w-[88px]" } px-4 sidebar bg-primary h-full  relative duration-300 no-scrollbar overflow-auto `}
   >
-        <div className='my-4 h-[80px] text-3xl font-bold w-full px-2  py-6 whitespace-nowrap shrink-0 flex gap-4'>
+        <div className='h-[75px] text-3xl font-bold w-full px-2  py-6 whitespace-nowrap shrink-0 flex gap-4'>
           <span>
-          <i class="fa-solid fa-book fa-lg" style={{color: "#ffffff"}}></i>
+          <i class="fa-solid fa-book fa-lg"style={{color: "#ffffff"}} ></i>
           </span>
-          {showSidebar&& <h3 className='text-white'>Writter</h3>}  
+          {showSidebar&& <h3 className='text-white' >Writter</h3>}  
         </div>
         <div className='mt-5 '>
         <ul className='space-y-4'>
@@ -52,7 +51,7 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
                 className={`navlink text-white
               font-poppins flex items-center  gap-4 w-full rounded-lg pl-4 group font-[300] `}>
                <span className="shrink-0">
-               <i class="fa-solid fa-house" style={{color: "#ffffff"}}></i>
+               <i class="fa-solid fa-house text-white " ></i>
                </span>
                 <span className={` ${!showSidebar ? 'hidden' : 'block'} text-base origin-left duration-200 flex justify-between items-center w-full`}>
                 Dashboard
@@ -64,11 +63,11 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
             {/* users */}
 
             <li  className="w-full overflow-hidden capitalize py-4 shrink-0  ">
-              <Link 
+              <Link to="/users"
                 className={`navlink text-white
               font-poppins flex items-center  gap-4 w-full rounded-lg pl-4 group cursor-pointer font-[300] `}>
                <span className="shrink-0">
-               <i class="fa-regular fa-user" style={{color: "#ffffff"}}></i>
+               <i class="fa-regular fa-user" ></i>
                </span>
                 <span className={` ${!showSidebar ? 'hidden' : 'block'} text-base origin-left duration-200 flex justify-between items-center w-full`}>
                   Users
@@ -78,11 +77,11 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
             </li>
             {/* posts */}
             <li  className="w-full overflow-hidden capitalize py-4 shrink-0   ">
-              <Link 
+              <Link to="/posts"
                 className={`navlink text-white
               font-poppins flex items-center  gap-4 w-full rounded-lg pl-4 group cursor-pointer font-[300] `}>
                <span className="shrink-0">
-               <i class="fa-solid fa-list" style={{color: "#ffffff"}}></i>
+               <i class="fa-solid fa-list" ></i>
                </span>
                 <span className={` ${!showSidebar ? 'hidden' : 'block'} text-base origin-left duration-200 flex justify-between items-center w-full`}>
                   Posts
@@ -92,11 +91,11 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
             </li>
             {/* categories */}
             <li  className="w-full overflow-hidden capitalize py-4 shrink-0   ">
-              <Link 
+              <Link to="/categories"
                 className={`navlink text-white
               font-poppins flex items-center  gap-4 w-full rounded-lg pl-4 group cursor-pointer font-[300] `}>
                <span className="shrink-0">
-               <i class="fa-solid fa-folder" style={{color: "#ffffff"}}></i>
+               <i class="fa-solid fa-folder" ></i>
                </span>
                 <span className={` ${!showSidebar ? 'hidden' : 'block'} text-base origin-left duration-200 flex justify-between items-center w-full`}>
                   Categories
@@ -110,7 +109,7 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
                 className={`navlink text-white
               font-poppins flex items-center  gap-4 w-full rounded-lg pl-4 group cursor-pointer font-[300] `}>
                <span className="shrink-0">
-               <i class="fa-solid fa-image" style={{color: "#ffffff"}}></i>
+               <i class="fa-solid fa-image" ></i>
                </span>
                 <span className={` ${!showSidebar ? 'hidden' : 'block'} text-base origin-left duration-200 flex justify-between items-center w-full`}>
                   Gallery
@@ -123,11 +122,11 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
             {/* settings */}
 
             <li  className="w-full overflow-hidden capitalize py-4 shrink-0   ">
-              <Link 
+              <Link to="/settings"
                 className={`navlink text-white
               font-poppins flex items-center  gap-4 w-full rounded-lg pl-4 group cursor-pointer font-[300] `}>
                <span className="shrink-0">
-               <i class="fa-solid fa-gear" style={{color: "#ffffff"}}></i>
+               <i class="fa-solid fa-gear" ></i>
                </span>
                 <span className={` ${!showSidebar ? 'hidden' : 'block'} text-base origin-left duration-200 flex justify-between items-center w-full`}>
                   Settings
