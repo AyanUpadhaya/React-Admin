@@ -1,0 +1,15 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+ /* daisy ui style end */
+  
+ ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f3bcbc;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #1E293B;
+    border-radius: 10px;
+  }
