@@ -13,7 +13,7 @@ const Layout = () => {
             </div> 
             <div className='h-full flex-1 w-full overflow-hidden' >
                 <Navbar toggleSidebar = {()=>setShowSidebar(prev=>!prev)}></Navbar>
-                <div className="h-[calc(100%-50px)] overflow-auto">
+                <div className="h-[calc(100%-80px)] overflow-auto">
                     <Outlet></Outlet>
                 </div>
             </div>

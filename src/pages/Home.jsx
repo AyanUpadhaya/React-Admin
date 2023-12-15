@@ -128,11 +128,11 @@ const Home = () => {
         {/* charts */}
         <div className='self-stretch flex gap-5'>
           <div className='bg-white rounded-xl p-4 w-full'>
-            <h3 className='text-4xl my-3 font-semibold text-blackHighEmp'>Website views</h3>
+            <h3 className='text-xl my-3 font-semibold text-blackHighEmp'>Website views</h3>
           <Barchart data={data}></Barchart>
           </div>
           <div className='bg-white rounded-xl p-4 w-full'>
-          <h3 className='text-4xl my-3 font-semibold text-blackHighEmp'>Revenue</h3>
+          <h3 className='text-xl my-3 font-semibold text-blackHighEmp'>Revenue</h3>
           <CustomAreaChart></CustomAreaChart>
           </div>
          
