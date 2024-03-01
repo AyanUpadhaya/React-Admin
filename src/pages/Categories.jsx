@@ -1,18 +1,17 @@
-import React from 'react'
+import Searchbar from "../components/shared/search/Searchbar";
+import CategoriesTable from "../components/tables/CategoriesTable";
+import { dummyBlogPostData } from "../db/db";
 
 const Categories = () => {
-    return (
-        <div className='w-full h-full p-6'>
-          <div className='flex flex-col gap-10'>
-            {/* top */}
-            <div className='bg-white self-stretch rounded-lg p-4'>
-              <h2 className='text-4xl font-semibold mb-4'>Categories</h2>
-            </div>
-    
-            
-          </div>
-        </div>
-      )
-}
+  let content = <CategoriesTable data={dummyBlogPostData}></CategoriesTable>;
+  return (
+    <section className="h-full w-full ">
+      <div className="bg-white shadow-sm w-full h-full rounded-2xl overflow-hidden">
+        <Searchbar title={"Categories Table"} placeholder={'Search Categories'}></Searchbar>
+        <div className="h-[calc(100%-100px)] ">{content}</div>
+      </div>
+    </section>
+  );
+};
 
-export default Categories
+export default Categories;

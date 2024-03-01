@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { profile } from '../../assets/getAssets'
 import { useNavigate } from 'react-router-dom';
 import { Pagination } from '../shared/ui/Pagination';
 
 const UsersTable = ({data}) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(8);
   const indexOfLastRow = currentPage * rowsPerPage;

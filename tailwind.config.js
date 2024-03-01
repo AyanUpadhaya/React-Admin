@@ -1,32 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors:{
-        primary:"#212035",
+      colors: {
+        primary: "#212035",
         white: "#fff",
         whiteLow: "#F6F6F6",
 
         "black-25": "rgba(0, 0, 0, 0.25)",
         "black-04": "rgba(0, 0, 0, 0.04)",
-       
+
         black: "#000",
         blackHigh: "#303C58",
-        blackHighEmp:"#474747",
-        blackMediumEmp:"#2F2F2F",
-        blackLowEmp:"#5E6064",
+        blackHighEmp: "#474747",
+        blackMediumEmp: "#2F2F2F",
+        blackLowEmp: "#5E6064",
         blackSemi: "#45526E",
         blackLow: "#707D9B",
-        whiteLowEmp:"#9E9FA7",
-        whiteGrayLow:'#e4ffff',
-        neutralColorTwoHundread:"#E3E3E3",
+        whiteLowEmp: "#9E9FA7",
+        whiteGrayLow: "#e4ffff",
+        neutralColorTwoHundread: "#E3E3E3",
 
         blueColor: "#515EDB",
         blueLight: "#F0F1FF",
@@ -35,12 +29,14 @@ export default {
         themeSemi: "#DAEDFF",
         slateLow: "#E0E0E0",
 
-        optionColor:"#D2FBFC",
-        maincolor:"#75BFC0",
-        disabledColor:'#9efbfb',
-        tablenav:"#E3EFFB",
+        optionColor: "#D2FBFC",
+        maincolor: "#75BFC0",
+        disabledColor: "#9efbfb",
+        tablenav: "#E3EFFB",
 
         primaryColor: "#EF5777",
+
+        customColor:'#1E293B',
 
         secondaryColor: "#FFEBF0",
 
@@ -66,11 +62,17 @@ export default {
 
         fadeColor: "#B8B8B8",
         fadeLight: "#F6F6F6",
-        navBgColor:'#221f4d',
-        addWallpaper:'#3399DB',
-        svgHover:"#C1EF00",
-      }
+        navBgColor: "#221f4d",
+        addWallpaper: "#3399DB",
+        svgHover: "#C1EF00",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [require("daisyui")],
-}
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
+};

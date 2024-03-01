@@ -1,4 +1,5 @@
 import { profile } from "../assets/getAssets";
+import Searchbar from "../components/shared/search/Searchbar";
 import UsersTable from "../components/tables/UsersTable"
 
 const Users = () => {
@@ -121,11 +122,9 @@ const Users = () => {
   let content = <UsersTable data={data}></UsersTable>
   
   return (
-    <section className="h-full w-full px-4 md:px-6 py-4 ">
+    <section className="h-full w-full ">
       <div className="bg-white shadow-sm w-full h-full rounded-2xl overflow-hidden">
-        <div className="bg-[#1E293B] text-white w-full">
-          <h3 className="font-semibold text-base leading-normal py-6 px-4 ">Users Table</h3>
-        </div>
+        <Searchbar title={'Users Table'}></Searchbar>
         <div className="h-[calc(100%-100px)] ">{content}</div>
       </div>
     </section>
